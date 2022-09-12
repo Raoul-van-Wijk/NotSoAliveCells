@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public const int startScene = 1;
+    public bool gameHasEnded = false;
     public bool immortal = false;
 
     [SerializeField] Rigidbody2D rb;
@@ -19,7 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         if(rb.position.y < 0)
         {
-            RetryScene();
+            SceneManager.LoadScene("GameOver");
         }
     }
 
@@ -29,11 +31,4 @@ public class PlayerController : MonoBehaviour
         immortal = b;
     }
 
-
-
-    public void RetryScene()
-    {
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
-    }
 }
