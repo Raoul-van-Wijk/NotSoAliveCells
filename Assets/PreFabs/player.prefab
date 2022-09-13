@@ -43,11 +43,12 @@ GameObject:
   - component: {fileID: 7320753677662879342}
   - component: {fileID: 7320753677662879313}
   - component: {fileID: 7320753677662879312}
+  - component: {fileID: -2637918086223356152}
   - component: {fileID: 7320753677662879315}
   - component: {fileID: 7320753677662879314}
   - component: {fileID: -2547684817377481888}
   m_Layer: 0
-  m_Name: Player
+  m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,6 +155,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   immortal: 0
   rb: {fileID: 7320753677662879315}
+--- !u!114 &-2637918086223356152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7320753677662879317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5a82c64c9147b4d8672f5c7f69c555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!50 &7320753677662879315
 Rigidbody2D:
   serializedVersion: 4
@@ -213,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5a82c64c9147b4d8672f5c7f69c555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!1 &7320753678388758680
 GameObject:
   m_ObjectHideFlags: 0
