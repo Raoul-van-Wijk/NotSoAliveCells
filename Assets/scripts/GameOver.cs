@@ -8,7 +8,13 @@ public class GameOver : MonoBehaviour
 {
 
     public Text pointsText;
-    public void Setup(int score)
+    private int score;
+
+    public void Awake()
+    {
+        score = ScoreSystem.score;
+    }
+    public void Start()
     {
         gameObject.SetActive(true);
         pointsText.text = "Youre score is:" + score.ToString();
