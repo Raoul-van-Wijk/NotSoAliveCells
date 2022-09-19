@@ -8,6 +8,11 @@ public class ScoreSystem : MonoBehaviour
     public static int score = 0;
     [SerializeField] private Text scoreText;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        scoreText.text = score.ToString();
+    }
     void Start()
     {
         
