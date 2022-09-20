@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
+    private float wallJumpingPower = 20f;
 
     private bool isJumping;
     private float coyoteTime = 0.2f;
@@ -21,6 +22,11 @@ public class PlayerMovement : MonoBehaviour
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
+
+    private bool isTouchingLeft;
+    private bool isTouchingRight;
+    private bool wallJumping;
+    private float touchingLeftOrRight;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -65,6 +71,8 @@ public class PlayerMovement : MonoBehaviour
 
             coyoteTimeCounter = 0f;
         }
+
+        WallJumping();
 
         if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
@@ -121,5 +129,41 @@ public class PlayerMovement : MonoBehaviour
         isJumping = true;
         yield return new WaitForSeconds(0.4f);
         isJumping = false;
+    }
+
+    private void WallJumping()
+    {
+        IsGrounded();
+
+        isTouchingLeft = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x - 0.5f, gameObject.transform.position.y),
+            new Vector2(0.2f, 0.9f), 0f, groundLayer);
+
+        isTouchingRight = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x + 0.5f, gameObject.transform.position.y),
+            new Vector2(0.2f, 0.9f), 0f, groundLayer);
+
+        if (isTouchingLeft)
+        {
+            touchingLeftOrRight = 1;
+        }
+        else if (isTouchingRight)
+        {
+            touchingLeftOrRight = -1;
+        }
+
+        if (Input.GetKeyDown("space") && (isTouchingRight || isTouchingLeft) && !IsGrounded())
+        {
+            wallJumping = true;
+            Invoke("SetJumpingToFalse", 0.08f);
+        }
+
+        if (wallJumping)
+        {
+            rb.velocity = new Vector2(speed * touchingLeftOrRight, wallJumpingPower);
+        }
+    }
+
+    void SetJumpingToFalse()
+    {
+        wallJumping = false;
     }
 }
