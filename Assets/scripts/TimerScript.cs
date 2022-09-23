@@ -21,6 +21,6 @@ public class TimerScript : MonoBehaviour
         string minutes = ((int)t / 60).ToString();
         string seconds = Mathf.Floor((t % 60)).ToString();
 
-        timerText.text = minutes + ":" + seconds; dqe
+        timerText.text = minutes + ":" + seconds; 
     }
 }
