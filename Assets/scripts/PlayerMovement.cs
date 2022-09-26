@@ -28,6 +28,11 @@ public class PlayerMovement : MonoBehaviour
     private bool wallJumping;
     private float touchingLeftOrRight;
 
+    private bool isHit = false;
+    [SerializeField] private float knockbackStrengthX = 7f;
+    [SerializeField] private float knockbackStrengthY = 7f;
+    [SerializeField] private float resetTimer = 0.5f;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -35,8 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
-        horizontal = Input.GetAxisRaw("Horizontal");
+		horizontal = Input.GetAxisRaw("Horizontal");
 
         if (IsGrounded())
         {
@@ -78,17 +82,39 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
-
         Flip();
     }
 
     private void FixedUpdate()
     {
-        if(isDashing) {
+        if(isDashing || isHit) {
             return;
         }
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
+
+    // Knock the player back they are hit
+    public void Knockback(GameObject origin)
+	{
+        isHit = true;
+        // reverse direction
+        float direction = (transform.position.x - origin.transform.position.x);
+        rb.velocity = Vector2.zero;
+        if (direction > 0)
+        {
+            rb.AddForce(new Vector2(knockbackStrengthX, knockbackStrengthY), ForceMode2D.Impulse);
+        } else
+		{
+            rb.AddForce(new Vector2(-knockbackStrengthX, knockbackStrengthY), ForceMode2D.Impulse);
+        }
+        StartCoroutine(ResetKnockback());
+    }
+
+    private IEnumerator ResetKnockback()
+	{
+        yield return new WaitForSeconds(resetTimer);
+        isHit = false;
+	}
 
     private bool IsGrounded()
     {
