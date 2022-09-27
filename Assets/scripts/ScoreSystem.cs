@@ -23,6 +23,7 @@ public class ScoreSystem : MonoBehaviour
     {
         
     }
+
     //void OnCollisionEnter2D(Collision2D other)
     //{
     //    if (other.gameObject.tag == "Enemy")
