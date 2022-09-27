@@ -9,11 +9,11 @@ public class PlayerController : MonoBehaviour
     public bool immortal = false;
     private PlayerMovement playerMovement;
  
-    [SerializeField] float health;
+    private float health;
     [SerializeField] float maxHealth;
 
     // vars for damage slider beneath health slider
-    [SerializeField] float currentHealth;
+    private float currentHealth;
     [SerializeField] float healthReduction = 100f;
     [SerializeField] float initialDelay = 0.3f;
     [SerializeField] float delayHealthReduction = 0f;
@@ -27,9 +27,8 @@ public class PlayerController : MonoBehaviour
     {
         playerMovement = gameObject.GetComponent<PlayerMovement>();
 
-        // temp health
-        health = maxHealth = currentHealth = 100f;
-    }
+		health = currentHealth = maxHealth;
+	}
 
     // Update is called once per frame
     void Update()

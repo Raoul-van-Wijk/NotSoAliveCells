@@ -93,14 +93,19 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
-    // Knock the player back they are hit
+    /// <summary>
+    /// Knocks the player back reverse from where the origin comes from
+    /// </summary>
+    /// <param name="origin">Object from which the knockback comes from</param>
     public void Knockback(GameObject origin)
 	{
         isHit = true;
-        // reverse direction
-        float direction = (transform.position.x - origin.transform.position.x);
+
+        // reset velocity so player knockback is always consistent regardless of previous velocity
         rb.velocity = Vector2.zero;
-        if (direction > 0)
+
+        // determine where the player needs to be knocked back towards, determined by where the player is hit from
+        if (transform.position.x - origin.transform.position.x > 0)
         {
             rb.AddForce(new Vector2(knockbackStrengthX, knockbackStrengthY), ForceMode2D.Impulse);
         } else
@@ -110,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(ResetKnockback());
     }
 
+    // Timer for when the player is allowed to move again
     private IEnumerator ResetKnockback()
 	{
         yield return new WaitForSeconds(resetTimer);
