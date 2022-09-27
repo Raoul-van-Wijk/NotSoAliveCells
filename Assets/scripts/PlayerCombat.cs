@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    // public WeaponScritableObject activeWeapon;
+    // public WeaponScriptableObject activeWeapon;
 
-    public WeaponScritableObject weaponSlot1,
+    public WeaponScriptableObject weaponSlot1,
                                  weaponSlot2;
 
     public Transform attackPoint;
@@ -38,7 +38,7 @@ public class PlayerCombat : MonoBehaviour
     /// Function used to deal dmg to all the enemies that where in range of hitarea when attack was triggered
     /// </summary>
     /// <param name="activeWeapon">Weapon that caused attack trigger</param>
-    private void Attack(WeaponScritableObject activeWeapon)
+    private void Attack(WeaponScriptableObject activeWeapon)
     {
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, activeWeapon.attackRange, enemyLayers);

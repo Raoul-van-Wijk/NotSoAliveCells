@@ -143,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
         canDash = false;
         isDashing = true;
         PlayerController pc = FindObjectOfType<PlayerController>();
-        pc.ToggleImmortal(true);
+        pc.SetImmortal(true);
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
@@ -152,7 +152,7 @@ public class PlayerMovement : MonoBehaviour
         tr.emitting = false;
         rb.gravityScale = originalGravity;
         isDashing = false;
-        pc.ToggleImmortal(false);
+        pc.SetImmortal(false);
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }

@@ -10,9 +10,9 @@ public class SwapWeapon : MonoBehaviour
     private Transform weaponTransform;
     public PlayerCombat playerCombat;
 
-    private WeaponScritableObject slot1,
+    private WeaponScriptableObject slot1,
                                  slot2;
-    public WeaponScritableObject WeaponPickUp;
+    public WeaponScriptableObject WeaponPickUp;
 
     public TextMeshProUGUI weaponName1,
                            weaponName2,
@@ -73,7 +73,7 @@ public class SwapWeapon : MonoBehaviour
 
     private void SwapWeaponSlot()
     {
-        WeaponScritableObject swap = WeaponPickUp;
+        WeaponScriptableObject swap = WeaponPickUp;
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             CloseSwapWeaponUI();

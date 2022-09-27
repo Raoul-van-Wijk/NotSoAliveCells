@@ -12,7 +12,7 @@ public enum StatusEffects
 }
 
 [CreateAssetMenuAttribute(fileName = "Weapons", menuName = "ScriptableObjects/Weapons")]
-public class WeaponScritableObject : ScriptableObject
+public class WeaponScriptableObject : ScriptableObject
 { 
     public enum WeaponType
     {
