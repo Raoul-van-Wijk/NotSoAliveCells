@@ -25,12 +25,12 @@ public class ScoreSystem : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Enemy")
+        //if (other.gameObject.tag == "Enemy")
         {
-            score += 1;
-            Debug.Log(score);
-            Destroy(other.gameObject);
-            scoreText.text = score.ToString();
+          //  score += 1;
+            //Debug.Log(score);
+            //Destroy(other.gameObject);
+            //scoreText.text = score.ToString();
 
         }
     }
