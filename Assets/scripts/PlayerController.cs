@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+// This script will be used for combat
 
 public class PlayerController : MonoBehaviour
 {
+    // Variable to set immortal state
     public bool immortal = false;
     private PlayerMovement playerMovement;
  
@@ -73,7 +75,7 @@ public class PlayerController : MonoBehaviour
             playerMovement.Knockback(origin);
 	}
 
-    public void ToggleImmortal(bool b)
+    public void SetImmortal(bool b)
     {
         immortal = b;
     }
