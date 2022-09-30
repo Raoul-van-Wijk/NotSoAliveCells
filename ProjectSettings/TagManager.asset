@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - Spawnpoint
+  - GameOver
   - changeDirection
   layers:
   - Default
@@ -17,6 +19,7 @@ TagManager:
   - Enemy
   - EnemyDirectionChange
   - Player
+
   - 
   - 
   - 

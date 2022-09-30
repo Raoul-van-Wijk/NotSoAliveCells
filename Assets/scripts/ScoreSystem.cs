@@ -8,6 +8,11 @@ public class ScoreSystem : MonoBehaviour
     public static int score = 0;
     [SerializeField] private Text scoreText;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        scoreText.text = score.ToString();
+    }
     void Start()
     {
         
@@ -18,15 +23,16 @@ public class ScoreSystem : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Enemy")
-        {
-            score += 1;
-            Debug.Log(score);
-            Destroy(other.gameObject);
-            scoreText.text = score.ToString();
 
-        }
-    }
+    //void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    if (other.gameObject.tag == "Enemy")
+    //    {
+    //        score += 1;
+    //        Debug.Log(score);
+    //        Destroy(other.gameObject);
+    //        scoreText.text = score.ToString();
+
+    //    }
+    //}
 }
