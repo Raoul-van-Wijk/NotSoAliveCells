@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Spawnpoint
   - GameOver
+  - changeDirection
   layers:
   - Default
   - TransparentFX
@@ -15,9 +16,10 @@ TagManager:
   - Ground
   - Water
   - UI
-  - Player
   - Enemy
-  - 
+  - EnemyDirectionChange
+  - Player
+
   - 
   - 
   - 
