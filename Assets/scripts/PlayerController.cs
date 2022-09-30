@@ -23,13 +23,15 @@ public class PlayerController : MonoBehaviour
     public Slider sliderHealth;
     public Slider sliderDamage;
 
+    private AudioManager audioManager;
+
     [SerializeField] Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         playerMovement = gameObject.GetComponent<PlayerMovement>();
-
-		health = currentHealth = maxHealth;
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+        health = currentHealth = maxHealth;
 	}
 
     // Update is called once per frame
@@ -46,10 +48,21 @@ public class PlayerController : MonoBehaviour
                 currentHealth = health;
             sliderDamage.value = currentHealth / maxHealth;
         }
+
+    }
+
+	void FixedUpdate()
+	{
         if (rb.position.y < 0)
         {
-            SceneManager.LoadScene("GameOver");
+            GameOver();
         }
+    }
+
+	public void GameOver()
+	{
+        audioManager.DeathSound();
+        SceneManager.LoadScene("GameOver");
     }
 
     /// <summary>
@@ -68,9 +81,7 @@ public class PlayerController : MonoBehaviour
         delayHealthReduction = Time.time + initialDelay;
 
         if (health <= 0)
-		{
-            SceneManager.LoadScene("GameOver");
-        }
+            GameOver();
         else
             playerMovement.Knockback(origin);
 	}

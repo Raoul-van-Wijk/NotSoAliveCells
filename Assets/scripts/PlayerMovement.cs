@@ -38,10 +38,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
 
+    private AudioManager audioManager;
+
+	void Start()
+	{
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
     void Update()
     {
 		horizontal = Input.GetAxisRaw("Horizontal");
 
+        // checks if player is on the ground, coyotetimecounter allows player to jump shortly after no longer touching ground if it's within [coyoteTime]
         if (IsGrounded())
         {
             coyoteTimeCounter = coyoteTime;
@@ -51,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
 
+        // if jump is pressed, there is a [jumpBufferTime] amount of time for the player to hit the ground and jump again
         if (Input.GetButtonDown("Jump"))
         {
             jumpBufferCounter = jumpBufferTime;
@@ -62,8 +71,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f && !isJumping)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            audioManager.JumpSound();
 
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            
             jumpBufferCounter = 0f;
 
             StartCoroutine(JumpCooldown());
@@ -80,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
+            audioManager.DashSound();
             StartCoroutine(Dash());
         }
         Flip();
