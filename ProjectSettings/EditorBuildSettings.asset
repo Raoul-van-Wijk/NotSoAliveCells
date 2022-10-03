@@ -5,7 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/AudioScene.unity
+    guid: dbf7a369a539db44195afb28b738f56e
+  - enabled: 1
+    path: Assets/Scenes/hp-management.unity
+    guid: 5a66190e213065446ae67abbadd488c7
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 9c8cd211aa1515c4e87f16de148ff51a
+  - enabled: 1
+    path: Assets/Scenes/ScoreSystem.unity
+    guid: 98802850362fba141b40e76273a370cc
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 376165597d4137b48968503a7ab4bbc9
   m_configObjects: {}
