@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   weaponName: Sword
-  weapenSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  weapenSprite: {fileID: 21300000, guid: 27548a91c498e90439adaa1638d18937, type: 3}
   weaponType: 0
   statusEffect: 3
   attackRange: 1.2
-  attackDamage: 0
+  attackDamage: 14
   attackRate: 0.5
   critRate: 23
   critRateModifier: 1.95843
