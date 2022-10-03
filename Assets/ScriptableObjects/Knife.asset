@@ -17,7 +17,7 @@ MonoBehaviour:
   weaponType: 0
   statusEffect: 1
   attackRange: 0.8
-  attackDamage: 0
+  attackDamage: 8
   attackRate: 2
   critRate: 45
   critRateModifier: 2

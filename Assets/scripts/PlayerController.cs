@@ -49,6 +49,12 @@ public class PlayerController : MonoBehaviour
             sliderDamage.value = currentHealth / maxHealth;
         }
 
+
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            TakeDamage(10f);
+        }
+
     }
 
 	void FixedUpdate()
@@ -70,7 +76,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     /// <param name="damage">How much damage the player should take</param>
     /// <param name="origin">Origin (source) of the damage</param>
-    public void TakeDamage(float damage, GameObject origin)
+    public void TakeDamage(float damage, GameObject origin = null)
 	{
         health -= damage;
 
@@ -80,10 +86,14 @@ public class PlayerController : MonoBehaviour
         // sets initial delay
         delayHealthReduction = Time.time + initialDelay;
 
-        if (health <= 0)
-            GameOver();
+        if (health <= 0) GameOver();
         else
-            playerMovement.Knockback(origin);
+        {
+            if (origin != null)
+            {
+                playerMovement.Knockback(origin);
+            }
+        }
 	}
 
     public void SetImmortal(bool b)
