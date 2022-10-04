@@ -23,16 +23,16 @@ public class PlayerController : MonoBehaviour
     public Slider sliderHealth;
     public Slider sliderDamage;
 
-    private AudioManager audioManager;
-
     [SerializeField] Rigidbody2D rb;
+
+    [SerializeField] AudioClip deathSound, backgroundMusic;
     // Start is called before the first frame update
     void Start()
     {
         playerMovement = gameObject.GetComponent<PlayerMovement>();
-        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         health = currentHealth = maxHealth;
-	}
+        AudioManager.Instance.PlayBackground(backgroundMusic);
+    }
 
     // Update is called once per frame
     void Update()
@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
 	public void GameOver()
 	{
-        audioManager.DeathSound();
+        AudioManager.Instance.PlaySound(deathSound);
         SceneManager.LoadScene("GameOver");
     }
 
