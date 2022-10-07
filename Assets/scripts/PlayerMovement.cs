@@ -38,12 +38,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
 
-    private AudioManager audioManager;
-
-	void Start()
-	{
-        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
-    }
+    [SerializeField] private AudioClip jumpSound, dashSound;
 
     void Update()
     {
@@ -71,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f && !isJumping)
         {
-            audioManager.JumpSound();
+            AudioManager.Instance.PlaySound(jumpSound);
 
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             
@@ -91,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
-            audioManager.DashSound();
+            AudioManager.Instance.PlaySound(dashSound);
             StartCoroutine(Dash());
         }
         Flip();

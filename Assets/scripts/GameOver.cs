@@ -23,11 +23,13 @@ public class GameOver : MonoBehaviour
     public void RetryGame()
     {
         ScoreSystem.score = 0;
+        AudioManager.Instance.DestroyThis();
         SceneManager.LoadScene(1);
     }
 
     public void MainMenu()
     {
+        AudioManager.Instance.DestroyThis();
         SceneManager.LoadScene("MainMenu");
     }
 }
