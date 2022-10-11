@@ -12,12 +12,7 @@ public class Pause : MonoBehaviour
     private string previousButton;
 
     [SerializeField] private GameObject pauseMenu;
-    [SerializeField] private GameObject confermation;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    [SerializeField] private GameObject confirmation;
 
     // Update is called once per frame
     void Update()
@@ -25,19 +20,15 @@ public class Pause : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isGamePaused)
-            {
                 ResumeGame();
-            }
             else
-            {
                 PauseGame();
-            }
         }
     }
 
     public void ResumeGame()
     {
-        confermation.SetActive(false);
+        confirmation.SetActive(false);
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isGamePaused = false;
@@ -52,22 +43,20 @@ public class Pause : MonoBehaviour
 
     public void Confirm()
     {
-        if(previousButton == "Restart")
+        if (previousButton == "Restart")
         {
           SceneManager.LoadScene(SceneManager.GetActiveScene().name);
           Time.timeScale = 1f;    
         }
-        else if(previousButton == "MainMenu")
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
+        else if (previousButton == "MainMenu")
+           SceneManager.LoadScene("MainMenu");
     }
 
 
     public void LoadMainMenu()
     {
         pauseMenu.SetActive(false);
-        confermation.SetActive(true);
+        confirmation.SetActive(true);
         previousButton = "MainMenu";
     }
 
@@ -79,7 +68,7 @@ public class Pause : MonoBehaviour
     public void RestartLevel()
     {
         pauseMenu.SetActive(false);
-        confermation.SetActive(true);
+        confirmation.SetActive(true);
         previousButton = "Restart";
     }
 }
