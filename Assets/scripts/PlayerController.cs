@@ -68,8 +68,9 @@ public class PlayerController : MonoBehaviour
 
 	public void GameOver()
 	{
-        AudioManager.Instance.PlaySound(deathSound);
-        SceneManager.LoadScene("GameOver");
+		AudioManager.Instance.PlaySound(deathSound);
+        AudioManager.Instance.StopBackground();
+		SceneManager.LoadScene("GameOver");
     }
 
     /// <summary>

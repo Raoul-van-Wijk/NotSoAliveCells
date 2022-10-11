@@ -45,6 +45,11 @@ public class AudioManager : MonoBehaviour
         audioSourceBGM.Play();
     }
 
+    public void StopBackground()
+	{
+        audioSourceBGM.Stop();
+    }
+
     public void ChangeBGMVolume()
 	{
         audioSourceBGM.volume = volumeBGM;
