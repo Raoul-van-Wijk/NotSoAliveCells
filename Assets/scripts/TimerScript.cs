@@ -8,6 +8,9 @@ public class TimerScript : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     private float startTime;
+
+
+    public float runTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +21,11 @@ public class TimerScript : MonoBehaviour
     void Update()
     {
         float t = Time.time - startTime;
-
+        runTime = t;
         string minutes = ((int)t / 60).ToString();
         string seconds = Mathf.Floor((t % 60)).ToString();
 
-        timerText.SetText(minutes + ":" + seconds); 
+        // timerText.SetText(minutes + ":" + seconds); 
     }
 }
     
