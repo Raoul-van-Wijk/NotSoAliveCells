@@ -10,6 +10,8 @@ TagManager:
   - GameOver
   - AudioManager
   - changeDirection
+  - enemySpawnPlace
+  - Timer
   layers:
   - Default
   - TransparentFX

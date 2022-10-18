@@ -27,6 +27,7 @@ public class PlayerCombat : MonoBehaviour
 
     public Transform attackPoint;
     public LayerMask enemyLayers;
+    public float damageMultiplier;
 
     private Collider2D inRange;
 
@@ -120,11 +121,11 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Random.Range(0f, 100f) <= activeWeapon.critRate)
             {
-                enemy.GetComponent<EnemyTestScript>().ManageDamage(activeWeapon.attackDamage * activeWeapon.critRateModifier, activeWeapon.statusEffect);
+                enemy.GetComponent<EnemyTestScript>().ManageDamage((activeWeapon.attackDamage * activeWeapon.critRateModifier) * damageMultiplier, activeWeapon.statusEffect);
             }
             else
             {
-                enemy.GetComponent<EnemyTestScript>().ManageDamage(activeWeapon.attackDamage, activeWeapon.statusEffect);
+                enemy.GetComponent<EnemyTestScript>().ManageDamage(activeWeapon.attackDamage * damageMultiplier, activeWeapon.statusEffect);
             }
         }
     }

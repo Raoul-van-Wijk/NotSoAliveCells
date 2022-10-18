@@ -9,8 +9,8 @@ public class EnemyTestScript : MonoBehaviour
     /// <summary>
     /// Variable used to keep track of enemy hp
     /// </summary>
-    private float originalHP,
-                  hp = 100;
+    public float originalHP,
+                  hp;
 
 
     private float frozenMultiplier = 1;
@@ -47,6 +47,7 @@ public class EnemyTestScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hp = originalHP;
         Debug.Log(hp);
     }
 
@@ -202,5 +203,16 @@ public class EnemyTestScript : MonoBehaviour
         isFrozen = false;
         frozenMultiplier = 1f;
         this.frozenTimer = 0;
+    }
+
+
+    /// <summary>
+    /// Function used to adjust enemy strength bases on the current difficulty
+    /// </summary>
+    /// <param name="difficulty">Param used to keep track of difficulty</param>
+    public void IncreaseStrengthByDifficulty(float difficulty)
+    {
+        originalHP *= difficulty;
+        // dmg += (difficulty / 2);
     }
 }
