@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -9,16 +10,85 @@ public class PlayerCombat : MonoBehaviour
 
     public WeaponScriptableObject weaponSlot1,
                                  weaponSlot2;
+                                 
+    private SwapWeapon weaponPickUp;
+    private GameObject newWeapon;
+
+    public LayerMask playerLayer;
+
+    public TextMeshProUGUI weaponName1,
+                           weaponName2,
+                           pickupName;
+
+    public TextMeshProUGUI weaponEffect1,
+                           weaponEffect2,
+                           pickupEffect;
+    public GameObject weaponSwapUI;
 
     public Transform attackPoint;
     public LayerMask enemyLayers;
 
+    private Collider2D inRange;
+
+    [SerializeField] LayerMask weaponLayer;
+    public bool UIOpened = false;
 
     /// <summary>
     /// Variable used to keep track of next attack time
     /// </summary>
     private float nextAttackTime1,
                   nextAttackTime2 = 0f;
+
+    public void Equip(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            inRange = Physics2D.OverlapCircle(transform.position, 2.5f, weaponLayer);
+
+
+            if (!UIOpened && inRange)
+            {
+                newWeapon = inRange.gameObject;
+                weaponPickUp = inRange.gameObject.GetComponent<SwapWeapon>();
+                OpenSwapWeaponUI(weaponPickUp.weaponPickUp);
+            } else
+            {
+                CloseSwapWeaponUI();
+            }
+        }
+    }
+
+    public void SwapWeapon1(InputAction.CallbackContext context)
+	{
+        if (UIOpened)
+		{
+            WeaponScriptableObject swap = weaponPickUp.weaponPickUp;
+            CloseSwapWeaponUI();
+            weaponPickUp.weaponPickUp = weaponSlot1;
+            weaponSlot1 = swap;
+
+            if (weaponPickUp.weaponPickUp.weaponName == "Empty")
+			{
+                Destroy(newWeapon);
+			}
+		}
+    }
+
+    public void SwapWeapon2(InputAction.CallbackContext context)
+    {
+        if (UIOpened)
+        {
+            WeaponScriptableObject swap = weaponPickUp.weaponPickUp;
+            CloseSwapWeaponUI();
+            weaponPickUp.weaponPickUp = weaponSlot2;
+            weaponSlot2 = swap;
+
+            if (weaponPickUp.weaponPickUp.weaponName == "Empty")
+            {
+                Destroy(newWeapon);
+            }
+        }
+    }
 
     public void Attack(InputAction.CallbackContext context)
 	{
@@ -59,10 +129,29 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-
     private void OnDrawGizmosSelected()
     {
         if (attackPoint == null) return;
         Gizmos.DrawWireSphere(attackPoint.position, weaponSlot1.attackRange);
+    }
+
+    private void OpenSwapWeaponUI(WeaponScriptableObject weapon)
+    {
+        UIOpened = true;
+        weaponName1.SetText(weaponSlot1.weaponName);
+        weaponName2.SetText(weaponSlot2.weaponName);
+        pickupName.SetText(weapon.weaponName);
+
+        weaponEffect1.SetText(weaponSlot1.statusEffect.ToString());
+        weaponEffect2.SetText(weaponSlot2.statusEffect.ToString());
+        pickupEffect.SetText(weapon.statusEffect.ToString());
+
+        weaponSwapUI.SetActive(true);
+    }
+
+    private void CloseSwapWeaponUI()
+    {
+        UIOpened = false;
+        weaponSwapUI.SetActive(false);
     }
 }
