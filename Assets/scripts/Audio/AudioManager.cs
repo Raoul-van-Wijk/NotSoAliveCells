@@ -7,34 +7,57 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSourceSFX;
+    [SerializeField] private AudioSource audioSourceBGM;
+    public float volumeSFX = 1;
+    public float volumeBGM = 1;
 
-	private void Awake()
+    public bool muteSFX = false;
+    public bool muteBGM = false;
+
+    private void Awake()
 	{
         if (Instance != null && Instance != this)
             Destroy(this);
         else
 		{
             Instance = this;
-            audioSource = GetComponent<AudioSource>();
             DontDestroyOnLoad(this.gameObject);
         }
     }
 
     public void DestroyThis()
 	{
-        Destroy(this.gameObject);
+        Destroy(gameObject);
 	}
 
     public void PlaySound(AudioClip clip)
-	{
-        audioSource.PlayOneShot(clip);
+    {
+        if (!muteSFX)
+            audioSourceSFX.PlayOneShot(clip, volumeSFX);
 	}
 
     public void PlayBackground(AudioClip clip)
     {
-        audioSource.loop = true;
-        audioSource.clip = clip;
-        audioSource.Play();
+        audioSourceBGM.loop = true;
+        audioSourceBGM.clip = clip;
+        audioSourceBGM.volume = volumeBGM;
+        audioSourceBGM.Play();
     }
+
+    public void StopBackground()
+	{
+        audioSourceBGM.Stop();
+    }
+
+    public void ChangeBGMVolume()
+	{
+        audioSourceBGM.volume = volumeBGM;
+	}
+
+    // sets the bgm mute to that of muteBGM
+    public void SetMuteBGM()
+	{
+        audioSourceBGM.mute = muteBGM;
+	}
 }
