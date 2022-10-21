@@ -12,12 +12,12 @@ public class PlayerController : MonoBehaviour
     public bool immortal = false;
 
     private PlayerMovement playerMovement;
-
-    private float health;
-    [SerializeField] float maxHealth;
+ 
+    public float health;
+    public float maxHealth;
 
     // vars for damage slider beneath health slider
-    private float currentHealth;
+    public float currentHealth;
     [SerializeField] float healthReduction = 100f;
     [SerializeField] float initialDelay = 0.3f;
     [SerializeField] float delayHealthReduction = 0f;
