@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 // This script will be used for combat
@@ -9,6 +10,7 @@ public class PlayerController : MonoBehaviour
 {
     // Variable to set immortal state
     public bool immortal = false;
+
     private PlayerMovement playerMovement;
  
     public float health;
@@ -23,14 +25,16 @@ public class PlayerController : MonoBehaviour
     public Slider sliderHealth;
     public Slider sliderDamage;
 
+    [SerializeField] AudioClip deathSound, backgroundMusic;
+    
     [SerializeField] Rigidbody2D rb;
 
-    [SerializeField] AudioClip deathSound, backgroundMusic;
     // Start is called before the first frame update
     void Start()
     {
         playerMovement = gameObject.GetComponent<PlayerMovement>();
         health = currentHealth = maxHealth;
+
         AudioManager.Instance.PlayBackground(backgroundMusic);
     }
 
@@ -65,10 +69,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-	public void GameOver()
+    public void GameOver()
 	{
-        AudioManager.Instance.PlaySound(deathSound);
-        SceneManager.LoadScene("GameOver");
+		AudioManager.Instance.PlaySound(deathSound);
+        AudioManager.Instance.StopBackground();
+		SceneManager.LoadScene("GameOver");
     }
 
     /// <summary>
