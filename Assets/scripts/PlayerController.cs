@@ -25,9 +25,9 @@ public class PlayerController : MonoBehaviour
     public Slider sliderHealth;
     public Slider sliderDamage;
 
-    [SerializeField] AudioClip deathSound, backgroundMusic;
-    
     [SerializeField] Rigidbody2D rb;
+
+    [SerializeField] AudioClip deathSound, backgroundMusic;
 
     // Start is called before the first frame update
     void Start()
