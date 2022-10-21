@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
             // in case currentHealth is reduced below health, set it equal to health
             if (currentHealth <= health)
                 currentHealth = health;
-            sliderDamage.value = currentHealth / maxHealth;
+            SetSlider();
         }
 
 
@@ -67,6 +67,12 @@ public class PlayerController : MonoBehaviour
         {
             GameOver();
         }
+    }
+
+    public void SetSlider()
+	{
+        sliderDamage.value = currentHealth / maxHealth;
+        sliderHealth.value = health / maxHealth;
     }
 
     public void GameOver()
