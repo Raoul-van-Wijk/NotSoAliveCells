@@ -13,13 +13,24 @@ public class Pause : MonoBehaviour
 
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject confirmation;
+    [SerializeField] private GameObject optionsMenu;
+    [SerializeField] private GameObject rebindMenu;
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isGamePaused)
+            if (rebindMenu.activeSelf)
+			{
+                rebindMenu.SetActive(false);
+			}
+            else if (optionsMenu.activeSelf)
+            {
+                optionsMenu.SetActive(false);
+                pauseMenu.SetActive(true);
+            }
+            else if (isGamePaused)
                 ResumeGame();
             else
                 PauseGame();
@@ -62,7 +73,8 @@ public class Pause : MonoBehaviour
 
     public void OptionsMenu()
     {
-        
+        optionsMenu.SetActive(true);
+        pauseMenu.SetActive(false);
     }
 
     public void RestartLevel()

@@ -48,7 +48,6 @@ public class RebindKeys : MonoBehaviour
         inputAction.PerformInteractiveRebinding(index).WithCancelingThrough("<Keyboard>/escape").OnCancel(callback => {
             callback.Dispose();
             playerInput.currentActionMap.Enable();
-            rebindWindow.SetActive(false);
         }).OnComplete(callback =>
         {
             callback.Dispose();
