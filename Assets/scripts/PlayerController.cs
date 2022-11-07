@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
 	{
         if (rb.position.y < 0)
         {
-            GameOver();
+            // GameOver();
         }
     }
 
@@ -120,10 +120,10 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        if (collision.gameObject.CompareTag("Enemy"))
-		{
-            // access enemy script and retrieve strength to determine how much damage it deals
-            TakeDamage(collision.gameObject.GetComponent<TempEnemy>().Strength, collision.gameObject);
-		}
+        //      if (collision.gameObject.CompareTag("Enemy"))
+        //{
+        //          // access enemy script and retrieve strength to determine how much damage it deals
+        //          TakeDamage(collision.gameObject.GetComponent<TempEnemy>().Strength, collision.gameObject);
+        //}
     }
 }

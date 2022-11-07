@@ -44,8 +44,9 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput playerInput;
 
 	void Start()
-	{
+	{  
         playerInput = GetComponent<PlayerInput>();
+        
 	}
 
 	void Update()
