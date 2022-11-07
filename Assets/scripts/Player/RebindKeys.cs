@@ -17,7 +17,7 @@ public class RebindKeys : MonoBehaviour
         playerInput = GameObject.Find("player").GetComponent<PlayerInput>();
         boundKey = gameObject.transform.GetChild(0).GetComponent<TMP_Text>();
         rebindWindow = GameObject.Find("Rebind").transform.GetChild(0).gameObject;
-        actionToRebind = rebindWindow.transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>();
+        actionToRebind = rebindWindow.transform.GetChild(1).transform.GetChild(0).GetComponent<TMP_Text>();
         //rebindWindow = GameObject.Find("RebindWindow");
         //actionToRebind = rebindWindow.transform.Find("ActionToRebind").GetComponent<TMP_Text>();
     }

@@ -960,7 +960,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &2094777891189034376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,7 +992,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGamePaused: 0
   pauseMenu: {fileID: 2094777892144905639}
-  confermation: {fileID: 2094777890800612844}
+  confirmation: {fileID: 0}
+  optionsMenu: {fileID: 0}
+  rebindMenu: {fileID: 0}
 --- !u!1 &2094777891412934880
 GameObject:
   m_ObjectHideFlags: 0
