@@ -44,15 +44,14 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput playerInput;
 
 	void Start()
-	{
-        
+	{  
         playerInput = GetComponent<PlayerInput>();
         
 	}
 
 	void Update()
     {
-		horizontal = Input.GetAxisRaw("Horizontal");
+		horizontal = playerInput.actions.FindAction("Movement").ReadValue<float>();
 
         // checks if player is on the ground, coyotetimecounter allows player to jump shortly after no longer touching ground if it's within [coyoteTime]
         if (IsGrounded())
@@ -65,14 +64,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // if jump is pressed, there is a [jumpBufferTime] amount of time for the player to hit the ground and jump again
-        if (Input.GetButtonDown("Jump"))
-        {
-            jumpBufferCounter = jumpBufferTime;
-        }
-        else
-        {
-            jumpBufferCounter -= Time.deltaTime;
-        }
+        jumpBufferCounter -= Time.deltaTime;
 
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f && !isJumping)
         {
@@ -85,29 +77,59 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(JumpCooldown());
         }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-
-            coyoteTimeCounter = 0f;
-        }
-
         WallJumping();
 
-        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        {
-            AudioManager.Instance.PlaySound(dashSound);
-            StartCoroutine(Dash());
-        }
         Flip();
     }
 
-    private void FixedUpdate()
+	private void FixedUpdate()
     {
-        if(isDashing || isHit) {
+        if (isDashing || isHit) {
             return;
         }
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+    }
+
+    public void Dash(InputAction.CallbackContext context)
+	{
+        if (context.performed && canDash)
+            StartCoroutine(DashMove());
+	}
+
+    private IEnumerator DashMove()
+	{
+        AudioManager.Instance.PlaySound(dashSound);
+        canDash = false;
+        isDashing = true;
+        PlayerController pc = FindObjectOfType<PlayerController>();
+        pc.SetImmortal(true);
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        pc.SetImmortal(false);
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            jumpBufferCounter = jumpBufferTime;
+            if (rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+
+                coyoteTimeCounter = 0f;
+            }
+            if ((isTouchingRight || isTouchingLeft) && !IsGrounded())
+                rb.velocity = new Vector2(speed * touchingLeftOrRight, wallJumpingPower);
+        }
     }
 
     /// <summary>
@@ -155,24 +177,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private IEnumerator Dash()
-    {
-        canDash = false;
-        isDashing = true;
-        PlayerController pc = FindObjectOfType<PlayerController>();
-        pc.SetImmortal(true);
-        float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
-        tr.emitting = true;
-        yield return new WaitForSeconds(dashingTime);
-        tr.emitting = false;
-        rb.gravityScale = originalGravity;
-        isDashing = false;
-        pc.SetImmortal(false);
-        yield return new WaitForSeconds(dashingCooldown);
-        canDash = true;
-    }
     private IEnumerator JumpCooldown()
     {
         isJumping = true;
@@ -198,21 +202,5 @@ public class PlayerMovement : MonoBehaviour
         {
             touchingLeftOrRight = -1;
         }
-
-        if (Input.GetKeyDown("space") && (isTouchingRight || isTouchingLeft) && !IsGrounded())
-        {
-            wallJumping = true;
-            Invoke("SetJumpingToFalse", 0.08f);
-        }
-
-        if (wallJumping)
-        {
-            rb.velocity = new Vector2(speed * touchingLeftOrRight, wallJumpingPower);
-        }
-    }
-
-    void SetJumpingToFalse()
-    {
-        wallJumping = false;
     }
 }

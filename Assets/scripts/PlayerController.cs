@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 // This script will be used for combat
@@ -9,13 +10,14 @@ public class PlayerController : MonoBehaviour
 {
     // Variable to set immortal state
     public bool immortal = false;
+
     private PlayerMovement playerMovement;
  
-    private float health;
-    [SerializeField] float maxHealth;
+    public float health;
+    public float maxHealth;
 
     // vars for damage slider beneath health slider
-    private float currentHealth;
+    public float currentHealth;
     [SerializeField] float healthReduction = 100f;
     [SerializeField] float initialDelay = 0.3f;
     [SerializeField] float delayHealthReduction = 0f;
@@ -26,11 +28,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
 
     [SerializeField] AudioClip deathSound, backgroundMusic;
+
     // Start is called before the first frame update
     void Start()
     {
         playerMovement = gameObject.GetComponent<PlayerMovement>();
         health = currentHealth = maxHealth;
+
         AudioManager.Instance.PlayBackground(backgroundMusic);
     }
 
@@ -46,7 +50,7 @@ public class PlayerController : MonoBehaviour
             // in case currentHealth is reduced below health, set it equal to health
             if (currentHealth <= health)
                 currentHealth = health;
-            sliderDamage.value = currentHealth / maxHealth;
+            SetSlider();
         }
 
 
@@ -65,10 +69,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-	public void GameOver()
+    public void SetSlider()
 	{
-        AudioManager.Instance.PlaySound(deathSound);
-        SceneManager.LoadScene("GameOver");
+        sliderDamage.value = currentHealth / maxHealth;
+        sliderHealth.value = health / maxHealth;
+    }
+
+    public void GameOver()
+	{
+		AudioManager.Instance.PlaySound(deathSound);
+        AudioManager.Instance.StopBackground();
+		SceneManager.LoadScene("GameOver");
     }
 
     /// <summary>
