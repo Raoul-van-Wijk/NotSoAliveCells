@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -40,7 +41,16 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private AudioClip jumpSound, dashSound;
 
-    void Update()
+    private PlayerInput playerInput;
+
+	void Start()
+	{
+        
+        playerInput = GetComponent<PlayerInput>();
+        
+	}
+
+	void Update()
     {
 		horizontal = Input.GetAxisRaw("Horizontal");
 
