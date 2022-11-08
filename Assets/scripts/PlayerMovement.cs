@@ -29,9 +29,6 @@ public class PlayerMovement : MonoBehaviour
     private bool wallJumping;
     private float touchingLeftOrRight;
 
-    private float jumpTime = 0.2f;
-    private float higherjumpTimer = 0.2f;
-
     private bool isHit = false;
     [SerializeField] private float knockbackStrengthX = 7f;
     [SerializeField] private float knockbackStrengthY = 7f;
