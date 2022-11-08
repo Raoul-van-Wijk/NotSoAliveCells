@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private float coyoteTime = 0.2f;
     private float coyoteTimeCounter;
 
-    private float jumpBufferTime = 0.2f;
+    private readonly float jumpBufferTime = 0.2f;
     private float jumpBufferCounter;
 
     private bool canDash = true;
@@ -43,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
 
     private PlayerInput playerInput;
 
+    private bool isHoldingJumpButton;
+
 	void Start()
 	{  
         playerInput = GetComponent<PlayerInput>();
@@ -63,19 +65,28 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        // if jump is pressed, there is a [jumpBufferTime] amount of time for the player to hit the ground and jump again
-        jumpBufferCounter -= Time.deltaTime;
-
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f && !isJumping)
         {
             AudioManager.Instance.PlaySound(jumpSound);
 
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            
+
             jumpBufferCounter = 0f;
 
             StartCoroutine(JumpCooldown());
+        }   
+
+        if (isHoldingJumpButton)
+        {
+
+            jumpBufferCounter -= Time.deltaTime;
+
+        } else
+        {
+            jumpBufferCounter = 0;
         }
+
+
 
         WallJumping();
 
@@ -120,15 +131,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
+            isHoldingJumpButton = true;
             jumpBufferCounter = jumpBufferTime;
-            if (rb.velocity.y > 0f)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-
-                coyoteTimeCounter = 0f;
-            }
+            
             if ((isTouchingRight || isTouchingLeft) && !IsGrounded())
                 rb.velocity = new Vector2(speed * touchingLeftOrRight, wallJumpingPower);
+        }
+        if(context.canceled && rb.velocity.y > 0f)
+        {
+            isHoldingJumpButton = false;
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            coyoteTimeCounter = 0f;
         }
     }
 
