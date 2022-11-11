@@ -21,6 +21,7 @@ public class VolumeSlider : MonoBehaviour
             v = Mathf.Round(Mathf.Clamp(v, 0, 100));
             sliderText.text = v.ToString("0");
             AudioManager.Instance.volumeSFX = v / 100;
+            PlayerPrefs.SetInt("VolumeSFX", (int)v);
         });
     }
 }

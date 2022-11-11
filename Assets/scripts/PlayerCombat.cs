@@ -46,7 +46,6 @@ public class PlayerCombat : MonoBehaviour
         {
             inRange = Physics2D.OverlapCircle(transform.position, 2.5f, weaponLayer);
 
-
             if (!UIOpened && inRange)
             {
                 newWeapon = inRange.gameObject;

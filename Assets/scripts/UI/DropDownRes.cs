@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class DropDownRes : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class DropDownRes : MonoBehaviour
             this.height = height;
             this.refreshRate = refreshRate;
         }
+
+        public string SaveSettingString()
+		{
+            return $"{width}/{height}/{refreshRate}";
+		}
     }
 
     // list which will be filled at with all possible resolutions for better indexing (than checking the index of the dropdown since those are saved as strings)
@@ -39,7 +45,6 @@ public class DropDownRes : MonoBehaviour
             resolutionList.Add(new Resolution(res.width, res.height, res.refreshRate));
         }
 
-        // selects the current resolution
         dropdown.value = dropdown.options.FindIndex(option => option.text == Screen.currentResolution.width + "x" + Screen.currentResolution.height + " " + Screen.currentResolution.refreshRate + "Hz");
 
         dropdown.onValueChanged.AddListener((v) =>
