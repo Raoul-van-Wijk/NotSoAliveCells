@@ -15,5 +15,11 @@ public class FullscreenButton : MonoBehaviour
         {
             Screen.fullScreen = v;
         });
-    }
+
+		if (Screen.fullScreen)
+		{
+			toggle.isOn = Screen.fullScreen;
+		}
+
+	}
 }

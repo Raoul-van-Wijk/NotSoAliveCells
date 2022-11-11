@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class MuteBGM : MonoBehaviour
 {
-    private Button button;
-    private Image buttonImage;
+    [SerializeField] private Button button;
+    [SerializeField] private Image buttonImage;
     [SerializeField] private Sprite muted;
     [SerializeField] private Sprite unmuted;
 
@@ -14,20 +14,24 @@ public class MuteBGM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        button = gameObject.GetComponent<Button>();
-        buttonImage = gameObject.GetComponent<Image>();
-        button.onClick.AddListener(Mute);
+        button.onClick.AddListener(ToggleMute);
     }
 
-    public void Mute()
+    public void ToggleMute()
     {
-        // unmute/mute all SFX audio and change sprite to unmuted/muted
+        // Toggle mute BGM audio and changes sprite
         AudioManager.Instance.muteBGM = !AudioManager.Instance.muteBGM;
         AudioManager.Instance.SetMuteBGM();
         if (AudioManager.Instance.muteBGM)
+        {
             buttonImage.sprite = muted;
+            PlayerPrefs.SetInt("MutedBGM", 1);
+        }
         else
+		{
             buttonImage.sprite = unmuted;
+            PlayerPrefs.SetInt("MutedBGM", 0);
+        }
     }
 
     public void Unmute()
@@ -35,5 +39,6 @@ public class MuteBGM : MonoBehaviour
         buttonImage.sprite = unmuted;
         AudioManager.Instance.muteBGM = false;
         AudioManager.Instance.SetMuteBGM();
+        PlayerPrefs.SetInt("MutedBGM", 0);
     }
 }

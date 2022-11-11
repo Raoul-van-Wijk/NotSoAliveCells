@@ -22,6 +22,7 @@ public class VolumeSliderBGM : MonoBehaviour
             sliderText.text = v.ToString("0");
             AudioManager.Instance.volumeBGM = v / 100;
             AudioManager.Instance.ChangeBGMVolume();
+            PlayerPrefs.SetInt("VolumeBGM", (int)v);
         });
     }
 }
