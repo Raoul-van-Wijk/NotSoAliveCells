@@ -6,10 +6,14 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
-    private float speed = 8f;
-    private float jumpingPower = 16f;
+    private readonly float speed = 8f;
+    private readonly float jumpingPower = 16f;
+    private readonly float wallJumpingPower = 16f;
     private bool isFacingRight = true;
-    private float wallJumpingPower = 20f;
+    private bool isWallJumping = false;
+    private readonly float wallJumpingCooldown = 0.25f;
+    private float wallJumpingTime;
+    private float wallJumpingCheckTime;
 
     private bool isJumping;
     private float coyoteTime = 0.2f;
@@ -48,7 +52,6 @@ public class PlayerMovement : MonoBehaviour
 	void Start()
 	{  
         playerInput = GetComponent<PlayerInput>();
-        
 	}
 
 	void Update()
@@ -59,12 +62,14 @@ public class PlayerMovement : MonoBehaviour
         if (IsGrounded())
         {
             coyoteTimeCounter = coyoteTime;
+            isWallJumping = false;
         }
         else
         {
             coyoteTimeCounter -= Time.deltaTime;
         }
 
+        // jump, coyoteTimeCounter is bigger than 0 when on the ground and a short time after leaving, jumpBufferCounter is bigger than 0 when jump button is pressed and [jumpBufferTime] after that
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f && !isJumping)
         {
             AudioManager.Instance.PlaySound(jumpSound);
@@ -74,21 +79,27 @@ public class PlayerMovement : MonoBehaviour
             jumpBufferCounter = 0f;
 
             StartCoroutine(JumpCooldown());
-        }   
+        // wall jump code
+        } else if (jumpBufferCounter > 0f && (isTouchingRight || isTouchingLeft) && !IsGrounded() && !isWallJumping)
+		{
+            rb.velocity = new Vector2(speed * touchingLeftOrRight, wallJumpingPower);
+            AudioManager.Instance.PlaySound(jumpSound);
+            isWallJumping = true;
+            isTouchingLeft = isTouchingRight = false;
+            wallJumpingTime = Time.time + wallJumpingCooldown;
+            wallJumpingCheckTime = Time.time + 0.05f;
+            rb.gravityScale = 4f;
+            jumpBufferCounter = 0f;
+        }
 
         if (isHoldingJumpButton)
         {
-
             jumpBufferCounter -= Time.deltaTime;
 
         } else
         {
             jumpBufferCounter = 0;
         }
-
-
-
-        WallJumping();
 
         Flip();
     }
@@ -98,7 +109,27 @@ public class PlayerMovement : MonoBehaviour
         if (isDashing || isHit) {
             return;
         }
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+
+        // if the player is walljumping, disables movement for a short period
+        if (!isWallJumping)
+		{
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            WallJumping();
+        }
+        else
+        {
+            // is walljumping
+            rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x + (horizontal * speed * Time.deltaTime * 4), -8f, 8f), rb.velocity.y);
+            //Debug.Log(Mathf.Clamp(rb.velocity.x + (horizontal * speed * Time.deltaTime), -8f, 8f));
+            if (Time.time >= wallJumpingTime)
+			{
+                isWallJumping = false;
+			}
+            if (Time.time >= wallJumpingCheckTime)
+			{
+                WallJumping();
+			}
+		}
     }
 
     public void Dash(InputAction.CallbackContext context)
@@ -133,11 +164,9 @@ public class PlayerMovement : MonoBehaviour
         {
             isHoldingJumpButton = true;
             jumpBufferCounter = jumpBufferTime;
-            
-            if ((isTouchingRight || isTouchingLeft) && !IsGrounded())
-                rb.velocity = new Vector2(speed * touchingLeftOrRight, wallJumpingPower);
         }
-        if(context.canceled && rb.velocity.y > 0f)
+        // for jumping higher when you hold jump, this if passes if the player is going upwards and releases the jump button
+        else if (context.canceled && rb.velocity.y > 0f)
         {
             isHoldingJumpButton = false;
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
@@ -176,8 +205,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.4f, groundLayer);
-    }
+		return Physics2D.OverlapArea(new Vector2(groundCheck.position.x - 0.49f, groundCheck.position.y), new Vector2(groundCheck.position.x + 0.49f, groundCheck.position.y), groundLayer);
+	}
 
     private void Flip()
     {
@@ -199,8 +228,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void WallJumping()
     {
-        IsGrounded();
-
         isTouchingLeft = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x - 0.5f, gameObject.transform.position.y),
             new Vector2(0.2f, 0.9f), 0f, groundLayer);
 
@@ -208,12 +235,23 @@ public class PlayerMovement : MonoBehaviour
             new Vector2(0.2f, 0.9f), 0f, groundLayer);
 
         if (isTouchingLeft)
-        {
+		{
             touchingLeftOrRight = 1;
+            isWallJumping = false;
+            // wall sliding when player is on left wall and presses left movement
+            rb.gravityScale = rb.velocity.y <= 0 && horizontal < 0 ? 2f : 4f;
+
         }
         else if (isTouchingRight)
-        {
+		{
             touchingLeftOrRight = -1;
+            isWallJumping = false;
+            // wall sliding when player is on right wall and presses right movement
+            rb.gravityScale = rb.velocity.y <= 0 && horizontal > 0 ? 2f : 4f;
+        }
+        else
+		{
+            rb.gravityScale = 4f;
         }
     }
 }
