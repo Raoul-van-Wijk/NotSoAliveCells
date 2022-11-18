@@ -22,18 +22,26 @@ public class ShootingEnemy : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if (Time.time > nextShotTime)
-        {
-            Instantiate(projectile, transform.position, Quaternion.identity);
-            nextShotTime = Time.time + timeBetweenShots;
-        }
+        
 
-        if (Vector2.Distance(transform.position, target.position) > minimumDistance)
+        if (Vector2.Distance(transform.position, target.position) < minimumDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, -enemySpeed * Time.deltaTime);
+            
+            if (Time.time > nextShotTime)
+            {
+                Instantiate(projectile, transform.position, Quaternion.identity);
+                nextShotTime = Time.time + timeBetweenShots;
+            }
             //transform.position = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         }
-
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            Vector2.MoveTowards(transform.position, target.position, enemySpeed * Time.deltaTime);
+        }
+    }
 }

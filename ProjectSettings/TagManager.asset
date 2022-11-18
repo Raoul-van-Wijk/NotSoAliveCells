@@ -12,6 +12,7 @@ TagManager:
   - changeDirection
   - enemySpawnPlace
   - Timer
+  - Wall
   layers:
   - Default
   - TransparentFX

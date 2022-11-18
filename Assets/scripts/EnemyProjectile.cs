@@ -7,21 +7,43 @@ public class EnemyProjectile : MonoBehaviour
 
     private Vector3 targetPosition;
     public float projectileSpeed;
+    public Rigidbody2D r;
+    public PlayerController playerCon;
 
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(SelfDestruct());
+        r = GetComponent<Rigidbody2D>();
         targetPosition = FindObjectOfType<PlayerController>().transform.position;
+        playerCon = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, projectileSpeed * Time.deltaTime);
+    }
 
-        if (transform.position == targetPosition)
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+            //Destroy(collision.gameObject);
         }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            playerCon.TakeDamage(3f);
+            Destroy(this.gameObject);
+            //Destroy(collision.gameObject);
+        }
+    }
+
+    IEnumerator SelfDestruct()
+    {
+        yield return new WaitForSeconds(3f);
+        Destroy(gameObject);
     }
 }
