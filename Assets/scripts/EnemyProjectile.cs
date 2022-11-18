@@ -8,6 +8,7 @@ public class EnemyProjectile : MonoBehaviour
     private Vector3 targetPosition;
     public float projectileSpeed;
     public Rigidbody2D r;
+    public PlayerController playerCon;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class EnemyProjectile : MonoBehaviour
         StartCoroutine(SelfDestruct());
         r = GetComponent<Rigidbody2D>();
         targetPosition = FindObjectOfType<PlayerController>().transform.position;
+        playerCon = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class EnemyProjectile : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            playerCon.TakeDamage(3f);
             Destroy(this.gameObject);
             //Destroy(collision.gameObject);
         }

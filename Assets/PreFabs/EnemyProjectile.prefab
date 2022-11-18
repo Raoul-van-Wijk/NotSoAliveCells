@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 2
-  r: {fileID: 0}
+  r: {fileID: 2748708212245136930}
 --- !u!50 &2748708212245136930
 Rigidbody2D:
   serializedVersion: 4

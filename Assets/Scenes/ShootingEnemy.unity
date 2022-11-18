@@ -375,6 +375,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1346022141440499970, guid: 434547bc6d6efe043b2c1834c4305ec3, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346022141440499970, guid: 434547bc6d6efe043b2c1834c4305ec3, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346022141440499970, guid: 434547bc6d6efe043b2c1834c4305ec3, type: 3}
       propertyPath: sliderDamage
       value: 
       objectReference: {fileID: 690169819}
@@ -382,6 +390,10 @@ PrefabInstance:
       propertyPath: sliderHealth
       value: 
       objectReference: {fileID: 1511843214}
+    - target: {fileID: 1346022141440499970, guid: 434547bc6d6efe043b2c1834c4305ec3, type: 3}
+      propertyPath: currentHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1346022141440499983, guid: 434547bc6d6efe043b2c1834c4305ec3, type: 3}
       propertyPath: m_Material
       value: 
