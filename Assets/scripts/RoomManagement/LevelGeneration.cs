@@ -21,10 +21,10 @@ public class LevelGeneration : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player.transform.position = Startroom.transform.Find("PlayerSpawn").transform.position;
 
         // Spawn the room where the player starts at the start of a level
         GameObject spawnRoom = Instantiate(Startroom, new Vector3(7.75f, 20f, 0), Quaternion.identity);
+        player.transform.position = spawnRoom.transform.Find("PlayerSpawn").transform.position;
         previousRoomExit = spawnRoom.transform.Find("Exit").transform.position;
         // Debug.Log(new Vector3(24, 20f, 0) - new Vector3(7.75f, 20f, 0));
         for (float i = 0; i < maxRoomsPerLevel; i++)

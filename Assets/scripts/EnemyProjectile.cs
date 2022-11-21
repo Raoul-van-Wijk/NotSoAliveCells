@@ -35,7 +35,7 @@ public class EnemyProjectile : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            playerCon.TakeDamage(3f);
+            playerCon.TakeDamage(3f, gameObject);
             Destroy(this.gameObject);
             //Destroy(collision.gameObject);
         }
@@ -43,7 +43,7 @@ public class EnemyProjectile : MonoBehaviour
 
     IEnumerator SelfDestruct()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(6f);
         Destroy(gameObject);
     }
 }

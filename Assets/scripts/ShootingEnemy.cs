@@ -6,7 +6,7 @@ public class ShootingEnemy : MonoBehaviour
 {   
     public Rigidbody2D rb;
     public float enemySpeed;
-    public Transform target;
+    private Transform target;
     public float minimumDistance;
     
 
@@ -16,14 +16,12 @@ public class ShootingEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        target = GameObject.Find("player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
-        
-
         if (Vector2.Distance(transform.position, target.position) < minimumDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, -enemySpeed * Time.deltaTime);
