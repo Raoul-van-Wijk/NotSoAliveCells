@@ -48,7 +48,6 @@ public class EnemyTestScript : MonoBehaviour
     void Start()
     {
         hp = originalHP;
-        Debug.Log(hp);
     }
 
     // Update is called once per frame

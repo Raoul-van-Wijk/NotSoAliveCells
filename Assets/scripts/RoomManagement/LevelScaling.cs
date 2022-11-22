@@ -21,7 +21,6 @@ public class LevelScaling : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(GameObject.Find("--GameManager--").gameObject.GetComponent<TimerScript>().runTime);
         SpawnEnemies(minEnemies, maxEnemies);
     }
 
@@ -37,7 +36,7 @@ public class LevelScaling : MonoBehaviour
         if (enemySpawnPoints.Count == 0 || max == 0) return;
         for (float i = Random.Range(min, max +1); i > 0; i--)   
         {
-            int random = Random.Range(0, enemySpawnPoints.Count) -1;
+            int random = Random.Range(0, enemySpawnPoints.Count - 1);
             enemySpawnPoints.RemoveAt(random);
             GameObject instance = Instantiate(enemyObject, enemySpawnPoints[random].transform.position, Quaternion.identity);
             instance.transform.SetParent(this.transform);
