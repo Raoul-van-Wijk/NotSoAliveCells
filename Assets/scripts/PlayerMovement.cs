@@ -45,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private AudioClip jumpSound, dashSound;
 
+    private PlayerController pc;
+
     private PlayerInput playerInput;
 
     private bool isHoldingJumpButton;
@@ -52,9 +54,10 @@ public class PlayerMovement : MonoBehaviour
 	void Start()
 	{  
         playerInput = GetComponent<PlayerInput>();
-	}
+        pc = FindObjectOfType<PlayerController>();
+    }
 
-	void Update()
+    void Update()
     {
 		horizontal = playerInput.actions.FindAction("Movement").ReadValue<float>();
 
@@ -82,13 +85,17 @@ public class PlayerMovement : MonoBehaviour
         // wall jump code
         } else if (jumpBufferCounter > 0f && (isTouchingRight || isTouchingLeft) && !IsGrounded() && !isWallJumping)
 		{
+            // makes the player jump the opposite direction of the wall they are touching
             rb.velocity = new Vector2(speed * touchingLeftOrRight, wallJumpingPower);
             AudioManager.Instance.PlaySound(jumpSound);
             isWallJumping = true;
             isTouchingLeft = isTouchingRight = false;
             wallJumpingTime = Time.time + wallJumpingCooldown;
             wallJumpingCheckTime = Time.time + 0.05f;
-            rb.gravityScale = 4f;
+
+            // dashing changes the gravityscale to 0, if the gravity is set back to 4 during a dash+walljump the dash will be very weak.
+            if (!isDashing)
+                rb.gravityScale = 4f;
             jumpBufferCounter = 0f;
         }
 
@@ -106,12 +113,13 @@ public class PlayerMovement : MonoBehaviour
 
 	private void FixedUpdate()
     {
-        if (isDashing || isHit) {
-            return;
-        }
+		if (isDashing || isHit)
+		{
+			return;
+		}
 
-        // if the player is walljumping, disables movement for a short period
-        if (!isWallJumping)
+		// if the player is walljumping, changes movement for a short period
+		if (!isWallJumping)
 		{
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
             WallJumping();
@@ -119,9 +127,10 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             // is walljumping
+            // movement is limited (clamp) between -8 and 8 (normaly horizontal movement), but instead of setting it to -8 or 8 for left and right respectively, this code slowly increases it every frame to form a curve
             rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x + (horizontal * speed * Time.deltaTime * 4), -8f, 8f), rb.velocity.y);
-            //Debug.Log(Mathf.Clamp(rb.velocity.x + (horizontal * speed * Time.deltaTime), -8f, 8f));
-            if (Time.time >= wallJumpingTime)
+			//Debug.Log(Mathf.Clamp(rb.velocity.x + (horizontal * speed * Time.deltaTime), -8f, 8f));
+			if (Time.time >= wallJumpingTime)
 			{
                 isWallJumping = false;
 			}
@@ -143,7 +152,6 @@ public class PlayerMovement : MonoBehaviour
         AudioManager.Instance.PlaySound(dashSound);
         canDash = false;
         isDashing = true;
-        PlayerController pc = FindObjectOfType<PlayerController>();
         pc.SetImmortal(true);
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
