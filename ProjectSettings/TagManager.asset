@@ -10,6 +10,9 @@ TagManager:
   - GameOver
   - AudioManager
   - changeDirection
+  - enemySpawnPlace
+  - Timer
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -20,8 +23,7 @@ TagManager:
   - Enemy
   - EnemyDirectionChange
   - Player
-
-  - 
+  - Weapon
   - 
   - 
   - 
@@ -47,16 +49,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 3206533377
-    locked: 0
-  - name: Player
-    uniqueID: 2230159337
-    locked: 0
-  - name: Gun
-    uniqueID: 328300209
-    locked: 0
-  - name: Foreground
-    uniqueID: 357760497
     locked: 0

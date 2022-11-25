@@ -18,6 +18,6 @@ MonoBehaviour:
   statusEffect: 0
   attackRange: 0
   attackDamage: 0
-  attackRate: 0
+  attackRate: 1
   critRate: 0
   critRateModifier: 0

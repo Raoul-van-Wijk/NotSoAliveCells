@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 // This script will be used for combat
@@ -9,13 +10,14 @@ public class PlayerController : MonoBehaviour
 {
     // Variable to set immortal state
     public bool immortal = false;
+
     private PlayerMovement playerMovement;
  
-    private float health;
-    [SerializeField] float maxHealth;
+    public float health;
+    public float maxHealth;
 
     // vars for damage slider beneath health slider
-    private float currentHealth;
+    public float currentHealth;
     [SerializeField] float healthReduction = 100f;
     [SerializeField] float initialDelay = 0.3f;
     [SerializeField] float delayHealthReduction = 0f;
@@ -23,16 +25,18 @@ public class PlayerController : MonoBehaviour
     public Slider sliderHealth;
     public Slider sliderDamage;
 
-    private AudioManager audioManager;
-
     [SerializeField] Rigidbody2D rb;
+
+    [SerializeField] AudioClip deathSound, backgroundMusic;
+
     // Start is called before the first frame update
     void Start()
     {
         playerMovement = gameObject.GetComponent<PlayerMovement>();
-        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         health = currentHealth = maxHealth;
-	}
+
+        AudioManager.Instance.PlayBackground(backgroundMusic);
+    }
 
     // Update is called once per frame
     void Update()
@@ -46,7 +50,13 @@ public class PlayerController : MonoBehaviour
             // in case currentHealth is reduced below health, set it equal to health
             if (currentHealth <= health)
                 currentHealth = health;
-            sliderDamage.value = currentHealth / maxHealth;
+            SetSlider();
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            TakeDamage(10f);
         }
 
     }
@@ -55,14 +65,21 @@ public class PlayerController : MonoBehaviour
 	{
         if (rb.position.y < 0)
         {
-            GameOver();
+            // GameOver();
         }
     }
 
-	public void GameOver()
+    public void SetSlider()
 	{
-        audioManager.DeathSound();
-        SceneManager.LoadScene("GameOver");
+        sliderDamage.value = currentHealth / maxHealth;
+        sliderHealth.value = health / maxHealth;
+    }
+
+    public void GameOver()
+	{
+		AudioManager.Instance.PlaySound(deathSound);
+        AudioManager.Instance.StopBackground();
+		SceneManager.LoadScene("GameOver");
     }
 
     /// <summary>
@@ -70,7 +87,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     /// <param name="damage">How much damage the player should take</param>
     /// <param name="origin">Origin (source) of the damage</param>
-    public void TakeDamage(float damage, GameObject origin)
+    public void TakeDamage(float damage, GameObject origin = null)
 	{
         health -= damage;
 
@@ -80,10 +97,14 @@ public class PlayerController : MonoBehaviour
         // sets initial delay
         delayHealthReduction = Time.time + initialDelay;
 
-        if (health <= 0)
-            GameOver();
+        if (health <= 0) GameOver();
         else
-            playerMovement.Knockback(origin);
+        {
+            if (origin != null)
+            {
+                playerMovement.Knockback(origin);
+            }
+        }
 	}
 
     public void SetImmortal(bool b)
@@ -99,10 +120,10 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        if (collision.gameObject.CompareTag("Enemy"))
-		{
-            // access enemy script and retrieve strength to determine how much damage it deals
-            TakeDamage(collision.gameObject.GetComponent<TempEnemy>().Strength, collision.gameObject);
-		}
+        //      if (collision.gameObject.CompareTag("Enemy"))
+        //{
+        //          // access enemy script and retrieve strength to determine how much damage it deals
+        //          TakeDamage(collision.gameObject.GetComponent<TempEnemy>().Strength, collision.gameObject);
+        //}
     }
 }
