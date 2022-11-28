@@ -34,4 +34,6 @@ public class WeaponScriptableObject : ScriptableObject
     public float critRate;
     public float critRateModifier;
 
+    public float chance;
+
 }
