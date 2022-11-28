@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1996355446784552394, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
       propertyPath: m_Name
-      value: groundWeapon
+      value: groundWeapon Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552394, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1996355446784552395, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
       propertyPath: pickupName
@@ -91,6 +95,10 @@ PrefabInstance:
       propertyPath: weaponEffect2
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1996355448172550717, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1996355448246683154, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -2.53
@@ -98,6 +106,10 @@ PrefabInstance:
     - target: {fileID: 1996355448246683154, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355448246683157, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
