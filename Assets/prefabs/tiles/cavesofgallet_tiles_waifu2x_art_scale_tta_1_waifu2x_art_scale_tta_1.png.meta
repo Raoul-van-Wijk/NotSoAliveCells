@@ -1,0 +1,2247 @@
+fileFormatVersion: 2
+guid: 7b5f8dde6f50ec9449800e521ef36df6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e83dc14b471990d44b27118f1cd18d97
+      internalID: 1545873111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b123032480a1ce54495a4af35efa3258
+      internalID: -1072330346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2f0c72d6a224a47bc789331cac5f23
+      internalID: 1997186443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ddb2ce1cc5df04b9d570a0cccc7006
+      internalID: 1380066177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77dbe19993a6dfb498cf2d6da8166cc7
+      internalID: 1508642733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79c8ced4ecc60644981e083ee35f2ea
+      internalID: -639067039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c575a098a5478344b87f93d64712d9b
+      internalID: -761970718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1969b61ae2625546842477559d5bbe2
+      internalID: -557863385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86f51caf9b628245b122c0c5269d42c
+      internalID: -775290503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ece4709506effa4fb6fa10135f4a145
+      internalID: -982402856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa59ee21d6531348a452a71a395dc5e
+      internalID: -423572621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d99e81b9bbf3f4183d43998042dc60
+      internalID: -1032468955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f115f944af73ae54ea378529e2f6cd9c
+      internalID: 672768529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa0ecb4391ad5e4d8b4a0d4e9786ed9
+      internalID: -1530283256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8ff02dbfc3b0f4e92c26c6981b5a01
+      internalID: -13649282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6842990369e2ebe4c9329ac90c96d61d
+      internalID: -1881071020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22083fbcff75264caaf4bf33507d97f
+      internalID: -277081297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32fa96571e8d3e418509a65d3d3098c
+      internalID: 1561338870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d77cc6910e2a743a500d45c529e647
+      internalID: 1852050429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a7b9edadc25474d9045af31397548b
+      internalID: -603073399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab11eff6cb402b4fbbb6e054b45bac4
+      internalID: 1430118941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e3662619a8fcf41b017ccb03e806cc
+      internalID: 631035477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c05cee42d63fd42aa0860d2985dc04
+      internalID: -522169355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388cd79413bb9e24c83214700a431412
+      internalID: 22479818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5d23a759608934bb860f1ec3c771c5
+      internalID: -220415118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0181355048009c49b6855455a5cb54f
+      internalID: 365719732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae0dc83bf8f3d240be5b4d0ef224298
+      internalID: 1959148694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7263353f51536e24b932b6f87224311f
+      internalID: -1926690802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5846fbfc84457e40a9826443a83b342
+      internalID: 1182141428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7693131a4ebe1d3428d9e70072fcd53f
+      internalID: 1990704186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3d6557562f8bd43a19bff809b7fed2
+      internalID: 431605137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed0f3503ccd2d74f823dfad93ed8a28
+      internalID: 676948156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb94125490b842848ba608a7df4fc6ee
+      internalID: 673468888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec3c8f2a3d140948902d8c7b39d96da
+      internalID: 1027949442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efdd042f5582fa843b1ed770c332d33c
+      internalID: -861079832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2bbc7552507cf498dead5a2f35f838
+      internalID: -1301063073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5bea3d78f7297548bfd0b6058b84f1a
+      internalID: 1160800151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fc6f550a13a9f4d91d940738048486
+      internalID: -2043484053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece7db61862150548a9b23b5fb36c0b9
+      internalID: 798811369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd56abfabc172043b3d020d855607ff
+      internalID: -338127997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992048fb603db214ebd5520d850b7234
+      internalID: -8439715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbc13efd3528fe4494373b16326e1d9
+      internalID: -744644096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6d5d8b83489684fa9f26a74ce328f4
+      internalID: 890289899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a986a042588796a478fbd52e4f7d2e6c
+      internalID: 1249958280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3719ee32828905a4db460821393cc42e
+      internalID: -1410841499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516a44a7b0086f74aa235f7377db8e8d
+      internalID: -1460017809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b58ccc809914f4438558d80e798f5be
+      internalID: -1876101499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_47
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd56d42f88f0c4b44b0c374a6cb2be60
+      internalID: -411335447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53bed43be2cc85d4d91c1b0cd111d980
+      internalID: 2132116779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912c2ff815ee350429c5c3998be55d82
+      internalID: 24986534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e629d83ff3c4f564b9450ed7e2bf4c71
+      internalID: 405079320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c94aeef84e8134a9070af753487d90
+      internalID: 1838193556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_52
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8265b31e8abf2344880f6f0a43265975
+      internalID: -362444356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4f10d11d5de3444a398564cc2611af
+      internalID: -1750068946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30714d52b1cc63042876f3c9e878a8d7
+      internalID: -391153352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_55
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170b2644710519d4f879ddf1d40e71f8
+      internalID: -1398168828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb86b50a61bbbc4a8181efbf3e3d5a6
+      internalID: 1080330626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_57
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3524b151a918a0646afbc9f46abee101
+      internalID: 695115909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_58
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0570a40d2a1ff541859d4a2f925a691
+      internalID: 975036377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_59
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7575e84aacb1a64bbecc5c57ddb3a63
+      internalID: 710883910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_60
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f457e735a0fa2e0478ceda03457e6c0a
+      internalID: -1837159394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_61
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c018a91851611004ca4e048a3feaafc7
+      internalID: 1995093878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_62
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8119ba1416c73498efda7df1c0a182
+      internalID: -419946706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_63
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60ac9d8cf5f5464f86464f8a0b44448
+      internalID: -192582234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6303c5533cd007043a2518757eb59ce4
+      internalID: 464061909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_65
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb43934ccea395438743729c25feec2
+      internalID: 1179135168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_66
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2417396fde26ecb4f9a89435f77827a0
+      internalID: 2038790971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_67
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48132ccb80075f74b909347c527d0fe6
+      internalID: 438242446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_68
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb09d105085cac74dad5082c21fe078e
+      internalID: 2145083360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_69
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b949ea3e47d2d49be7e5df0819af90
+      internalID: 1844441575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_70
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3112d4c637e40ff40b001cff37c38bdf
+      internalID: 972653255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_71
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56205678fc062c146b1fa974f099c6fd
+      internalID: -243839057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f3c242cd57ae246b47d6b7edacf7a0
+      internalID: 849811332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_73
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f7593ce49f3094a81f2be8262d6395
+      internalID: -397637431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_74
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65058f44198c6f54192ba6608465065a
+      internalID: 1774476322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_75
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b144dca326746459bfeae8dad7ca08
+      internalID: 2124183171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_76
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2820d49620a36574fa0e736c5f42294e
+      internalID: -1806608546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_77
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be985173e32fc0448fad1611ffff5fc
+      internalID: -1373231321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_78
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a13c9e98a7e3a4faa24df04ac189a4
+      internalID: -1158925146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_79
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e0000a88227ca4c9ba9724eb0f494e
+      internalID: 312733860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73ae985b39a1674fb889b46974d8f28
+      internalID: -1647833864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_81
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5ea5be588163b4bbfe7be984064362
+      internalID: 803931294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_82
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da4a7a57cf880b418a0cf6d7a015280
+      internalID: 192915397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_83
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284b809fa3fdf8446b8408e1891639d3
+      internalID: 984828678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_84
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6781c7cb521d6364a87a868bc6e1bd54
+      internalID: -1899179011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_85
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208f0c7a94e69524492045250e87cc02
+      internalID: -1752173145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_86
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f7885d48f0a99439f089096df6c525
+      internalID: -774652906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_87
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2833cc2edbb87448c4a5b486430bc2
+      internalID: -1478471905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28097d2f74ccebc4c9b83e50fa3a690a
+      internalID: 1854002894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_89
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2be2abc00c5014b8a47cef70d7f386
+      internalID: -1356727857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_90
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2b67352fa364547a1e226047798e3e
+      internalID: -899205538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_91
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f403f4b14af3f947be2a137967b6654
+      internalID: 1498072690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_92
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6e3a66b3ad673468eb2f4db74e7553
+      internalID: -1795168237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_93
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28c505983aa40e4b9201d1c2b4b5446
+      internalID: -1014523439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_94
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7990ff27ed3fc234080e06148a41d2f7
+      internalID: 531664533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_95
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d274becd049fd949a5fcbfbf9e10dfb
+      internalID: -1521133474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_75: 2124183171
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_68: 2145083360
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_4: 1508642733
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_84: -1899179011
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_48: 2132116779
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_82: 192915397
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_16: -277081297
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_12: 672768529
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_94: 531664533
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_27: -1926690802
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_58: 975036377
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_14: -13649282
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_55: -1398168828
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_70: 972653255
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_1: -1072330346
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_95: -1521133474
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_22: -522169355
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_47: -411335447
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_69: 1844441575
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_43: 1249958280
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_77: -1373231321
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_5: -639067039
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_91: 1498072690
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_85: -1752173145
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_15: -1881071020
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_2: 1997186443
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_71: -243839057
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_31: 676948156
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_25: 365719732
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_42: 890289899
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_8: -775290503
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_36: 1160800151
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_26: 1959148694
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_38: 798811369
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_62: -419946706
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_37: -2043484053
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_23: 22479818
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_50: 405079320
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_24: -220415118
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_74: 1774476322
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_30: 431605137
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_44: -1410841499
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_40: -8439715
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_61: 1995093878
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_3: 1380066177
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_45: -1460017809
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_60: -1837159394
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_41: -744644096
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_32: 673468888
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_46: -1876101499
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_72: 849811332
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_78: -1158925146
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_33: 1027949442
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_79: 312733860
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_11: -1032468955
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_35: -1301063073
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_17: 1561338870
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_51: 1838193556
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_7: -557863385
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_67: 438242446
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_65: 1179135168
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_56: 1080330626
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_29: 1990704186
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_83: 984828678
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_59: 710883910
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_93: -1014523439
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_66: 2038790971
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_39: -338127997
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_87: -1478471905
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_13: -1530283256
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_73: -397637431
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_21: 631035477
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_34: -861079832
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_64: 464061909
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_86: -774652906
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_19: -603073399
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_54: -391153352
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_89: -1356727857
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_76: -1806608546
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_18: 1852050429
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_92: -1795168237
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_80: -1647833864
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_90: -899205538
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_6: -761970718
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_20: 1430118941
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_49: 24986534
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_63: -192582234
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_52: -362444356
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_9: -982402856
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_88: 1854002894
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_81: 803931294
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_10: -423572621
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_28: 1182141428
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_57: 695115909
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_53: -1750068946
+      cavesofgallet_tiles_waifu2x_art_scale_tta_1_waifu2x_art_scale_tta_1_0: 1545873111
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
