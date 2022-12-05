@@ -9,12 +9,12 @@ public class SwapWeapon : MonoBehaviour
 {
     public WeaponScriptableObject weaponPickUp;
     private LayerMask playerLayer;
-    private SpriteRenderer sr;
+    public SpriteRenderer sr;
 
     private void Awake()
     {
         playerLayer = LayerMask.GetMask("Player");
-        // sr = gameObject.GetComponent<SpriteRenderer>();
+        sr.sprite = weaponPickUp.weapenSprite;
         // sr.sprite = weaponPickUp.weapenSprite;
     }
 

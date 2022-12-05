@@ -46,14 +46,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioClip jumpSound, dashSound;
 
     private PlayerController pc;
-
+    private PlayerCombat playerCombat;
     private PlayerInput playerInput;
 
     private bool isHoldingJumpButton;
 
-	void Start()
+    void Start()
 	{  
         playerInput = GetComponent<PlayerInput>();
+        playerCombat = GetComponent<PlayerCombat>();
         pc = FindObjectOfType<PlayerController>();
     }
 
@@ -224,7 +225,10 @@ public class PlayerMovement : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
-        }
+			playerCombat.FlipWeapons();
+			// add weapon orderin layer swap
+			// reference to spriterenderer.sortingLayer
+		}
     }
 
     private IEnumerator JumpCooldown()

@@ -7,6 +7,14 @@ using TMPro;
 public class PlayerCombat : MonoBehaviour
 {
     // public WeaponScriptableObject activeWeapon;
+    [SerializeField] private GameObject leftHand;
+    [SerializeField] private GameObject rightHand;
+    [SerializeField] private SpriteRenderer weapon1SR;
+    [SerializeField] private SpriteRenderer weapon2SR;
+    [SerializeField] private Animator leftHandAnimator;
+    [SerializeField] private Animator rightHandAnimator;
+
+    private bool flipped = false;
 
     public WeaponScriptableObject weaponSlot1,
                                  weaponSlot2;
@@ -40,7 +48,14 @@ public class PlayerCombat : MonoBehaviour
     private float nextAttackTime1,
                   nextAttackTime2 = 0f;
 
-    public void Equip(InputAction.CallbackContext context)
+	void Start()
+	{
+        weapon1SR.sprite = weaponSlot1.weapenSprite;
+        weapon2SR.sprite = weaponSlot2.weapenSprite;
+
+    }
+
+	public void Equip(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
@@ -62,11 +77,19 @@ public class PlayerCombat : MonoBehaviour
 	{
         if (UIOpened)
 		{
+            // weapon to be picked up
             WeaponScriptableObject swap = weaponPickUp.weaponPickUp;
             CloseSwapWeaponUI();
-            weaponPickUp.weaponPickUp = weaponSlot1;
-            weaponSlot1 = swap;
 
+            // old weapon put back in the pickup weapon object
+            weaponPickUp.weaponPickUp = weaponSlot1;
+            // changes the sprite of the swap weapon object on ground
+            weaponPickUp.sr.sprite = weaponSlot1.weapenSprite;
+            // new weapon is put in the weaponSlot
+            weaponSlot1 = swap;
+            // changes sprite of weapon in hand
+            weapon1SR.sprite = swap.weapenSprite;
+            // destroy swap weapon object if empty
             if (weaponPickUp.weaponPickUp.weaponName == "Empty")
 			{
                 Destroy(newWeapon);
@@ -78,11 +101,19 @@ public class PlayerCombat : MonoBehaviour
     {
         if (UIOpened)
         {
+            // weapon to be picked up
             WeaponScriptableObject swap = weaponPickUp.weaponPickUp;
             CloseSwapWeaponUI();
-            weaponPickUp.weaponPickUp = weaponSlot2;
-            weaponSlot2 = swap;
 
+            // old weapon put back in the pickup weapon object
+            weaponPickUp.weaponPickUp = weaponSlot2;
+            // changes the sprite of the swap weapon object on ground
+            weaponPickUp.sr.sprite = weaponSlot1.weapenSprite;
+            // new weapon is put in the weaponSlot
+            weaponSlot2 = swap;
+            // changes sprite of weapon in hand
+            weapon2SR.sprite = swap.weapenSprite;
+            // destroy swap weapon object if empty
             if (weaponPickUp.weaponPickUp.weaponName == "Empty")
             {
                 Destroy(newWeapon);
@@ -93,8 +124,15 @@ public class PlayerCombat : MonoBehaviour
     public void Attack(InputAction.CallbackContext context)
 	{
         if (context.performed && Time.time >= nextAttackTime1)
-		{
+        {
             AttackWeapon(weaponSlot1);
+
+            // flipped player
+            if (!flipped)
+                leftHandAnimator.SetTrigger("Attack");
+            else
+                rightHandAnimator.SetTrigger("Attack");
+
             nextAttackTime1 = Time.time + 1f / weaponSlot1.attackRate;
         }
     }
@@ -102,8 +140,15 @@ public class PlayerCombat : MonoBehaviour
     public void Attack2(InputAction.CallbackContext context)
     {
         if (context.performed && Time.time >= nextAttackTime2)
-        {
+		{
             AttackWeapon(weaponSlot2);
+
+            // flipped player
+            if (!flipped)
+                rightHandAnimator.SetTrigger("Attack");
+            else
+                leftHandAnimator.SetTrigger("Attack");
+
             nextAttackTime2 = Time.time + 1f / weaponSlot2.attackRate;
         }
     }
@@ -154,4 +199,12 @@ public class PlayerCombat : MonoBehaviour
         UIOpened = false;
         weaponSwapUI.SetActive(false);
     }
+
+    public void FlipWeapons()
+	{
+		Sprite swap = weapon1SR.sprite;
+		weapon1SR.sprite = weapon2SR.sprite;
+		weapon2SR.sprite = swap;
+        flipped = !flipped;
+	}
 }
