@@ -202,7 +202,9 @@ public class PlayerCombat : MonoBehaviour
 
     public void FlipWeapons()
 	{
-		Sprite swap = weapon1SR.sprite;
+        leftHandAnimator.Play("Idle");
+        rightHandAnimator.Play("Idle");
+        Sprite swap = weapon1SR.sprite;
 		weapon1SR.sprite = weapon2SR.sprite;
 		weapon2SR.sprite = swap;
         flipped = !flipped;
