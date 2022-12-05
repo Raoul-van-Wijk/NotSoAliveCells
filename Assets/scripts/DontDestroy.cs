@@ -26,7 +26,7 @@ public class DontDestroy : MonoBehaviour
             // when player is above
             if (SceneManager.GetActiveScene().buildIndex > 1)
             {
-                TeleportToSpawn();
+                //TeleportToSpawn();
             }
         }
     }

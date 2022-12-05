@@ -12,18 +12,27 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/AudioScene.unity
-    guid: dbf7a369a539db44195afb28b738f56e
-  - enabled: 1
-    path: Assets/Scenes/hp-management.unity
-    guid: 5a66190e213065446ae67abbadd488c7
-  - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: 9c8cd211aa1515c4e87f16de148ff51a
-  - enabled: 1
-    path: Assets/Scenes/ScoreSystem.unity
-    guid: 98802850362fba141b40e76273a370cc
+    path: Assets/Scenes/sprint-demo-scenes/spr3-demo.unity
+    guid: 592b0d1abefdef34ca2069b8c1db7c6b
+  - enabled: 0
+    path: Assets/Scenes/sprint-demo-scenes/spr2-demo-1.unity
+    guid: ceb3cdc5f140a6546a7cb5d71ae34d64
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 376165597d4137b48968503a7ab4bbc9
+  - enabled: 0
+    path: Assets/Scenes/AudioScene.unity
+    guid: dbf7a369a539db44195afb28b738f56e
+  - enabled: 0
+    path: Assets/Scenes/hp-management.unity
+    guid: 5a66190e213065446ae67abbadd488c7
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/WeaponPickUp.unity
+    guid: 8a86250ab6c202a4390d42ce5b695cef
+  - enabled: 0
+    path: Assets/Scenes/ScoreSystem.unity
+    guid: 98802850362fba141b40e76273a370cc
   m_configObjects: {}

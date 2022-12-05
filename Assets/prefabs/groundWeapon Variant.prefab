@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4194935362317361252
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1996355446784552393, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552393, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.6048
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552393, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552393, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552393, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552393, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552393, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552393, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552393, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552393, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552393, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552394, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_Name
+      value: groundWeapon Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552394, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552395, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: pickupName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552395, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: weaponName1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552395, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: weaponName2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552395, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: WeaponPickUp
+      value: 
+      objectReference: {fileID: 11400000, guid: 20a24b1b08474fb4fa074219743f015b, type: 2}
+    - target: {fileID: 1996355446784552395, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552395, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: playerCombat
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552395, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: weaponSwapUI
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552395, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: weaponEffect1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355446784552395, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: weaponEffect2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355448172550717, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355448246683154, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355448246683154, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996355448246683157, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 926ab99bff3fe3747ab73891ac6cb2b8, type: 3}

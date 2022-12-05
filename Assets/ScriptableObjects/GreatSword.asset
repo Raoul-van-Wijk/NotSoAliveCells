@@ -21,3 +21,4 @@ MonoBehaviour:
   attackRate: 1
   critRate: 34
   critRateModifier: 2.5
+  chance: 50
