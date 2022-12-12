@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using TMPro;
 
@@ -13,6 +14,12 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private SpriteRenderer weapon2SR;
     [SerializeField] private Animator leftHandAnimator;
     [SerializeField] private Animator rightHandAnimator;
+
+    [SerializeField] private Image UiWeaponLeft;
+    [SerializeField] private Image UiWeaponRight;
+
+    [SerializeField] private AudioClip[] attackAudios;
+    [SerializeField] private AudioClip equipAudio;
 
     private bool flipped = false;
 
@@ -52,10 +59,12 @@ public class PlayerCombat : MonoBehaviour
 	{
         weapon1SR.sprite = weaponSlot1.weapenSprite;
         weapon2SR.sprite = weaponSlot2.weapenSprite;
+        UiWeaponLeft.sprite = weaponSlot1.weapenSprite;
+        UiWeaponRight.sprite = weaponSlot2.weapenSprite;
 
     }
 
-	public void Equip(InputAction.CallbackContext context)
+    public void Equip(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
@@ -81,14 +90,22 @@ public class PlayerCombat : MonoBehaviour
             WeaponScriptableObject swap = weaponPickUp.weaponPickUp;
             CloseSwapWeaponUI();
 
+            AudioManager.Instance.PlaySound(equipAudio);
+
             // old weapon put back in the pickup weapon object
             weaponPickUp.weaponPickUp = weaponSlot1;
             // changes the sprite of the swap weapon object on ground
             weaponPickUp.sr.sprite = weaponSlot1.weapenSprite;
             // new weapon is put in the weaponSlot
             weaponSlot1 = swap;
-            // changes sprite of weapon in hand
-            weapon1SR.sprite = swap.weapenSprite;
+            // changes sprite of weapon in hand, if player is flipped, change the other hand's sprite
+            if (flipped)
+                weapon2SR.sprite = swap.weapenSprite;
+            else
+                weapon1SR.sprite = swap.weapenSprite;
+            // changes sprite of ui weapon
+            UiWeaponLeft.sprite = swap.weapenSprite;
+
             // destroy swap weapon object if empty
             if (weaponPickUp.weaponPickUp.weaponName == "Empty")
 			{
@@ -97,23 +114,26 @@ public class PlayerCombat : MonoBehaviour
 		}
     }
 
+    // other hand
     public void SwapWeapon2(InputAction.CallbackContext context)
     {
         if (UIOpened)
         {
-            // weapon to be picked up
             WeaponScriptableObject swap = weaponPickUp.weaponPickUp;
             CloseSwapWeaponUI();
 
-            // old weapon put back in the pickup weapon object
+            AudioManager.Instance.PlaySound(equipAudio);
+
             weaponPickUp.weaponPickUp = weaponSlot2;
-            // changes the sprite of the swap weapon object on ground
-            weaponPickUp.sr.sprite = weaponSlot1.weapenSprite;
-            // new weapon is put in the weaponSlot
+            weaponPickUp.sr.sprite = weaponSlot2.weapenSprite;
             weaponSlot2 = swap;
-            // changes sprite of weapon in hand
-            weapon2SR.sprite = swap.weapenSprite;
-            // destroy swap weapon object if empty
+
+            if (flipped)
+                weapon1SR.sprite = swap.weapenSprite;
+            else
+                weapon2SR.sprite = swap.weapenSprite;
+            UiWeaponRight.sprite = swap.weapenSprite;
+
             if (weaponPickUp.weaponPickUp.weaponName == "Empty")
             {
                 Destroy(newWeapon);
@@ -127,8 +147,10 @@ public class PlayerCombat : MonoBehaviour
         {
             AttackWeapon(weaponSlot1);
 
-            // flipped player
-            if (!flipped)
+			AudioManager.Instance.PlaySound(attackAudios[Random.Range(0, 3)]);
+
+			// flipped player
+			if (!flipped)
                 leftHandAnimator.SetTrigger("Attack");
             else
                 rightHandAnimator.SetTrigger("Attack");
@@ -142,6 +164,8 @@ public class PlayerCombat : MonoBehaviour
         if (context.performed && Time.time >= nextAttackTime2)
 		{
             AttackWeapon(weaponSlot2);
+
+            AudioManager.Instance.PlaySound(attackAudios[Random.Range(0, 3)]);
 
             // flipped player
             if (!flipped)
