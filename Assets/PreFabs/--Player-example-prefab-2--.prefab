@@ -188,8 +188,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -60, y: 70}
-  m_SizeDelta: {x: 100, y: 120}
+  m_AnchoredPosition: {x: -47.400055, y: 51.500008}
+  m_SizeDelta: {x: 75, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1101587495016409540
 CanvasRenderer:
@@ -262,7 +262,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.8000488, y: 0}
-  m_SizeDelta: {x: 80, y: 90}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1101587495831386557
 CanvasRenderer:
@@ -338,8 +338,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -170, y: 70}
-  m_SizeDelta: {x: 100, y: 120}
+  m_AnchoredPosition: {x: -130, y: 51.5}
+  m_SizeDelta: {x: 75, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1101587496998675272
 CanvasRenderer:
@@ -2239,7 +2239,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 90}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2861605693127007718
 CanvasRenderer:
@@ -3008,6 +3008,13 @@ MonoBehaviour:
   weapon2SR: {fileID: 7780475782999633385}
   leftHandAnimator: {fileID: 7780475782689880440}
   rightHandAnimator: {fileID: 7780475782999633386}
+  UiWeaponLeft: {fileID: 2861605693127007721}
+  UiWeaponRight: {fileID: 1101587495831386556}
+  attackAudios:
+  - {fileID: 8300000, guid: 9bafb528c4a91c644936569aaa1a07b3, type: 3}
+  - {fileID: 8300000, guid: 0a2dcd21541af00449e674973ffcf5b4, type: 3}
+  - {fileID: 8300000, guid: 3abaee689cc0794469b5fd43ed11a5f3, type: 3}
+  equipAudio: {fileID: 8300000, guid: 1ca439ea92ba30446b06d9928ff5ef1b, type: 3}
   weaponSlot1: {fileID: 11400000, guid: 581be2adf5c15334386daa3b3eb91b57, type: 2}
   weaponSlot2: {fileID: 11400000, guid: ca9a5573405201747a77bf9601d6726d, type: 2}
   playerLayer:

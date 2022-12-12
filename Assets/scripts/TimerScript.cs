@@ -22,10 +22,10 @@ public class TimerScript : MonoBehaviour
     {
         float t = Time.time - startTime;
         runTime = t;
-        string minutes = ((int)t / 60).ToString();
-        string seconds = Mathf.Floor((t % 60)).ToString();
+        int minutes = (int)(t / 60);
+        int seconds = (int)Mathf.Floor(t % 60);
 
-        timerText.SetText(minutes + ":" + seconds); 
+        timerText.SetText(string.Format("{0:00}:{1:00}", minutes, seconds));
     }
 }
     
