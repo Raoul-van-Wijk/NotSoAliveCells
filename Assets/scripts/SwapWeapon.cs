@@ -14,6 +14,7 @@ public class SwapWeapon : MonoBehaviour
     private void Awake()
     {
         playerLayer = LayerMask.GetMask("Player");
+        sr = GetComponent<SpriteRenderer>();
         sr.sprite = weaponPickUp.weapenSprite;
         // sr.sprite = weaponPickUp.weapenSprite;
     }
