@@ -13,6 +13,8 @@ public class ShootingEnemy : MonoBehaviour
     public GameObject projectile;
     public float timeBetweenShots;
     private float nextShotTime;
+
+    [SerializeField] private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,7 @@ public class ShootingEnemy : MonoBehaviour
             if (Time.time > nextShotTime)
             {
                 Instantiate(projectile, transform.position, Quaternion.identity);
+                animator.SetTrigger("Shoot");
                 nextShotTime = Time.time + timeBetweenShots;
             }
             //transform.position = new Vector2(transform.localScale.x * -1, transform.localScale.y);
