@@ -49,6 +49,8 @@ public class PlayerMovement : MonoBehaviour
     private PlayerCombat playerCombat;
     private PlayerInput playerInput;
 
+    [SerializeField] private Animator playerAnimation;
+
     private bool isHoldingJumpButton;
 
     void Start()
@@ -61,13 +63,15 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 		horizontal = playerInput.actions.FindAction("Movement").ReadValue<float>();
-
+        playerAnimation.SetFloat("Speed", Mathf.Abs(horizontal));
         // checks if player is on the ground, coyotetimecounter allows player to jump shortly after no longer touching ground if it's within [coyoteTime]
         if (IsGrounded())
         {
             coyoteTimeCounter = coyoteTime;
             isWallJumping = false;
-        }
+            if (!isJumping)
+    			playerAnimation.SetBool("Jumping", false);
+		}
         else
         {
             coyoteTimeCounter -= Time.deltaTime;
@@ -77,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f && !isJumping)
         {
             AudioManager.Instance.PlaySound(jumpSound);
+            playerAnimation.SetBool("Jumping", true);
 
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
 
@@ -89,6 +94,8 @@ public class PlayerMovement : MonoBehaviour
             // makes the player jump the opposite direction of the wall they are touching
             rb.velocity = new Vector2(speed * touchingLeftOrRight, wallJumpingPower);
             AudioManager.Instance.PlaySound(jumpSound);
+            playerAnimation.SetTrigger("Rejump");
+            playerAnimation.SetBool("Jumping", true);
             isWallJumping = true;
             isTouchingLeft = isTouchingRight = false;
             wallJumpingTime = Time.time + wallJumpingCooldown;
