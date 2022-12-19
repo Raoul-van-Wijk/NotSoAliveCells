@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyProjectile : MonoBehaviour
 {
 
-    private Vector3 targetPosition;
+    private Vector3 targetDirection;
     public float projectileSpeed;
     public Rigidbody2D r;
     public PlayerController playerCon;
@@ -15,14 +15,14 @@ public class EnemyProjectile : MonoBehaviour
     {
         StartCoroutine(SelfDestruct());
         r = GetComponent<Rigidbody2D>();
-        targetPosition = FindObjectOfType<PlayerController>().transform.position;
+        targetDirection = (FindObjectOfType<PlayerController>().transform.position - transform.position).normalized;
         playerCon = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, projectileSpeed * Time.deltaTime);
+        transform.position += targetDirection * projectileSpeed * Time.deltaTime;
     }
 
 	private void OnTriggerEnter2D(Collider2D collision)
