@@ -25,9 +25,10 @@ public class EnemyProjectile : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, projectileSpeed * Time.deltaTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground")
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+        // layer 3 is ground layer
+        if (collision.gameObject.layer == 3)
         {
             Destroy(this.gameObject);
             //Destroy(collision.gameObject);
